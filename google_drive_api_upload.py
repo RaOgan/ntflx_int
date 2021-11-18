@@ -54,7 +54,7 @@ def main():
             status, done = downloader.next_chunk()
             print("Download %d%%." % int(status.progress() * 100))
         fh.seek(0)
-        with open(os.path.join('./', file_name), 'wb') as f:
+        with open(os.path.join('./', file_names), 'wb') as f:
             f.write(fh.read())
             f.close()
 
